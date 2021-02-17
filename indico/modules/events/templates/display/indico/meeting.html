@@ -70,6 +70,21 @@
         </div>
     {% endblock %}
 
+    {% block comments %}
+    <div class="event-comments">
+        <header class="event-comments__header">
+            <h3 class="event-comments__title">Comments</h3>
+            <button class="solid-button i-button">
+                <img class="solid-button__image" src="/images/solid-logo.svg" alt="The Solid Project logo.">
+                <span class="solid-button__text">Solid</span>
+            </button>
+        </header>
+        <main class="event-comments__body">
+            No comments
+        </main>
+    </div>
+    {% endblock %}
+
     {% block footer %}
     {% endblock %}
 </div>

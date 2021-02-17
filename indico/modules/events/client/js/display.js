@@ -182,4 +182,14 @@ import './util/social';
 
     setupEventDisplay();
   });
+
+  function initializeCommentModule() {
+    document.addEventListener('DOMContentLoaded', () => {
+      const $solidButton = document.querySelector('.solid-button');
+      $solidButton.addEventListener('click', () => {
+        console.log($solidButton)
+      })
+    })
+  }
+  initializeCommentModule()
 })();

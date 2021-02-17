@@ -1,0 +1,28 @@
+@import 'base';
+
+$indico-theme-color: #1a63a0;
+$header-bg-color: $indico-theme-color !default;
+
+.event-comments__header {
+  border-top-left-radius: $default-border-radius;
+  border-top-right-radius: $default-border-radius;
+  background: $header-bg-color;
+  padding: 10px 30px 10px;
+  color: white;
+  font-size: 12pt;
+  position: relative;
+  margin: 0;
+  padding: 10px 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h3 {
+    font-size: 20pt;
+    color: white;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,14 @@
+.solid-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  background: rgb(124, 77, 255) !important;
+  color: white !important;
+}
+
+.solid-button__image {
+  height: 20px;
+  margin-right: 10px;
+}
