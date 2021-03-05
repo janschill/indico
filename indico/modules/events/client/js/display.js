@@ -8,6 +8,7 @@
 import './util/list_generator';
 import './util/static_filters';
 import './util/social';
+import { SolidComment } from 'solid-comment'
 
 (function() {
   function setupEventDisplay() {
@@ -182,14 +183,4 @@ import './util/social';
 
     setupEventDisplay();
   });
-
-  function initializeCommentModule() {
-    document.addEventListener('DOMContentLoaded', () => {
-      const $solidButton = document.querySelector('.solid-button');
-      $solidButton.addEventListener('click', () => {
-        console.log($solidButton)
-      })
-    })
-  }
-  initializeCommentModule()
 })();
