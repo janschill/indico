@@ -8,7 +8,7 @@
 import './util/list_generator';
 import './util/static_filters';
 import './util/social';
-import { SolidComment } from 'solid-comment'
+import 'solid-comment'
 
 (function() {
   function setupEventDisplay() {
