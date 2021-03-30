@@ -436,6 +436,7 @@ class Event(SearchableTitleMixin, DescriptionMixin, LocationMixin, ProtectionMan
     contact_emails = _EventSettingProperty(event_contact_settings, 'emails')
     contact_phones = _EventSettingProperty(event_contact_settings, 'phones')
     public_regform_access = _EventSettingProperty(event_core_settings, 'public_regform_access')
+    # solid_comments = _EventSettingProperty(event_core_settings, 'solid_comments')
 
     @classmethod
     def category_chain_overlaps(cls, category_ids):
