@@ -8,7 +8,7 @@ export default async function setupSolidComments(params) {
   const eventProtection = params.eventProtection;
 
   if (eventId && eventProtection) {
-    const solidCommentId = `sc-development-indico-meeting-${eventProtection}-${eventId}`;
+    const solidCommentId = `indico-solid-test-cern-ch-${eventId}`;
     const serverUrl = solidCommentsURL({event_id: params.eventId});
     const solidComment = new SolidComment({
       solidCommentId,
