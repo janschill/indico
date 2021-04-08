@@ -85,7 +85,7 @@
     "semantic-ui-react": "^2.0.1",
     "shortid": "^2.2.16",
     "slugify": "^1.4.6",
-    "solid-comment": "^0.7.1",
+    "solid-comment": "^0.8.0",
     "tablesorter": "^2.31.3",
     "taggle": "^1.15.0",
     "ua-parser-js": "^0.7.23",
