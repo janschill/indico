@@ -1,7 +1,8 @@
 import solidCommentsURL from 'indico-url:events.solid_comments';
 
-import {indicoAxios} from 'indico/utils/axios';
 import SolidComment from 'solid-comment';
+
+import {indicoAxios} from 'indico/utils/axios';
 
 export default async function setupSolidComments(params) {
   const eventId = params.eventId;
@@ -14,6 +15,7 @@ export default async function setupSolidComments(params) {
       solidCommentId,
       eventVisibility: eventProtection,
       serverStorageEndpointUrl: serverUrl,
+      appUrl: window.location.href.split('?')[0],
     });
 
     await solidComment.initApp(); // render components
