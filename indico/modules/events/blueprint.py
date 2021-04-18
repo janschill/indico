@@ -82,6 +82,7 @@ solid_comments = EventSettingsProxy('solid_comments', {
     'comment_ids': [],
 })
 
+
 class RHEventSolidComments(RHDisplayEventBase):
     def _check_access(self):
         RHDisplayEventBase._check_access(self)
@@ -103,8 +104,8 @@ class RHEventSolidComments(RHDisplayEventBase):
         comment_ids.append(comment_id)
         solid_comments.set(self.event, 'comment_ids', comment_ids)
         return '', 201
-        # alternatively (if you need it), return the jsonified list like in GET
 
 
-# in case the blueprint you use already has a prefix with the event id, just put `/solid-comments` below
-_bp.add_url_rule('/event/<int:event_id>/solid-comments', 'solid_comments', RHEventSolidComments, methods=('GET', 'POST'))
+_bp.add_url_rule(
+    '/event/<int:event_id>/solid-comments', 'solid_comments', RHEventSolidComments, methods=('GET', 'POST')
+)
