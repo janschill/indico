@@ -70,6 +70,44 @@
         </div>
     {% endblock %}
 
+    {% block comments %}
+        <main class="solid-comment">
+            <header class="sc-header">
+            <h2 class="sc-header__title">Comments</h2>
+            <aside class="sc-header__aside">
+                <label class="sc-header__oidc-label" for="solid-oidc-issuer">Solid Identity Provider</label>
+                <input class="sc-header__oidc-input" type="url" name="oidcIssuer" id="solid-oidc-issuer" placeholder="Solid Identity Provider" value="https://solidcommunity.net">
+                <button class="sc-solid-button" id="sc-solid-button-login">
+                <img class="sc-solid-button__image" src="/images/solid-logo.svg" alt="The Solid Project logo.">
+                <span class="sc-solid-button__text">Log in</span>
+                </button>
+            </aside>
+            </header>
+            <main class="sc-main">
+            <details id="error" class="sc-error">
+                <summary class="sc-error__summary">Error: Application does not have control access</summary>
+                <div class="sc-error__body"></div>
+            </details>
+            <section class="sc-section-form">
+                <form id="sc-comment-form" class="sc-comment-form" action="">
+                <label class="sc-comment-form__label" for="sc-comment-form__input">Your comment</label>
+                <textarea class="sc-comment-form__input" name="comment" id="sc-comment-form__input" cols="30" rows="2" required placeholder="Add to the discussion"></textarea>
+
+                <input class="sc-comment-form__submit" type="submit" value="Submit">
+                </form>
+            </section>
+            <section class="sc-section-comments"></section>
+            </main>
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const eventId = {{ event.id }};
+                const eventProtection = {{ event.is_protected | tojson }} ? "private" : "public";
+                setupSolidComments({ eventId, eventProtection });
+            })
+        </script>
+    {% endblock %}
+
     {% block footer %}
     {% endblock %}
 </div>
