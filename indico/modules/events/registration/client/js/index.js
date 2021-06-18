@@ -17,6 +17,7 @@ import './form/sectiontoolbar';
 import './form/table';
 
 import './form/templates';
+import './solid';
 
 (function(global) {
   $(document).ready(function() {
